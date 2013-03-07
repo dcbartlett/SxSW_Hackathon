@@ -180,51 +180,56 @@ module.exports = {
 };
 					</code></pre>
 					</section>
-					<section data-markdown=>
+					<section>
 						<h2>Example: View</h2>
 						<p>layout.ejs</p>
-					
-```
-<!DOCTYPE html>
-<html>
-	<head>
-		<title><%- title %></title>
+<div style="background: #ffffff;">
+<code contenteditable><pre>
+&lt;!DOCTYPE&nbsp;html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;&lt;%-&nbsp;title&nbsp;%&gt;&lt;/title&gt;
 
-		<!-- Viewport mobile tag for sensible mobile support -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		&lt;!--&nbsp;Viewport&nbsp;mobile&nbsp;tag&nbsp;for&nbsp;sensible&nbsp;mobile&nbsp;support&nbsp;--&gt;
+		&lt;meta&nbsp;name=&quot;viewport&quot;&nbsp;content=&quot;width=device-width,&nbsp;initial-scale=1,&nbsp;maximum-scale=1&quot;&gt;
 		
-		<!-- JavaScript and stylesheets from your public folder are included here -->
-		<%- assets.css %>
-		<%- assets.js %>
-	</head>
+		&lt;!--&nbsp;JavaScript&nbsp;and&nbsp;stylesheets&nbsp;from&nbsp;your&nbsp;public&nbsp;folder&nbsp;are&nbsp;included&nbsp;here&nbsp;--&gt;
+		&lt;%-&nbsp;assets.css&nbsp;%&gt;
+		&lt;%-&nbsp;assets.js&nbsp;%&gt;
+	&lt;/head&gt;
 
-	<body>
-		<%- body %>
+	&lt;body&gt;
+		&lt;%-&nbsp;body&nbsp;%&gt;
 
-		<!-- Templates from your view path are included here -->
-		<%- assets.templateLibrary %>
-	</body>
-</html>
-```
+		&lt;!--&nbsp;Templates&nbsp;from&nbsp;your&nbsp;view&nbsp;path&nbsp;are&nbsp;included&nbsp;here&nbsp;--&gt;
+		&lt;%-&nbsp;assets.templateLibrary&nbsp;%&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
 					</section>
-					<section data-markdown>
+					<section>
 						<h2>Example: View</h2>
 						<p>index.ejs</p>
-```
-<section id="about">
-	<span>
-		<%- partial('sections/about')%>
-	</span>
-</section>
-<section id="blog">
-	<span>
-		<%- partial('sections/blog')%>
-	</span>
-</section>
-```					</section>
+<div style="background: #ffffff;">
+<code contenteditable><pre>
+&lt;section&nbsp;id=&quot;about&quot;&gt;
+	&lt;span&gt;
+		&lt;%-&nbsp;partial('sections/about')%&gt;
+	&lt;/span&gt;
+&lt;/section&gt;
+&lt;section&nbsp;id=&quot;blog&quot;&gt;
+	&lt;span&gt;
+		&lt;%-&nbsp;partial('sections/blog')%&gt;
+	&lt;/span&gt;
+&lt;/section&gt;
+</code></pre>
+</div>
+					</section>
 					<section>
 						<h2>Example: Controller</h2>
-						<pre><code contenteditable>
+<div style="background: #ffffff;">
+<pre><code contenteditable>
 var ChickenController = {
 
   // Peck the chicken specified by id (subtract 50 HP)
@@ -249,7 +254,8 @@ var ChickenController = {
   }
 };
 module.exports = ChickenController;
-					</code></pre>
+</code></pre>
+</div>
 					</section>
 					<section>
 						<h2>Example: Policies</h2>
@@ -269,7 +275,8 @@ module.exports.policies = {
 					<section>
 						<h2>Example: Policies</h2>
 						<p>api/policies/authenticated.js</p>
-						<pre><code contenteditable>
+<div style="background: #ffffff;">
+<pre><code contenteditable>
 /**
 * Allow any authenticated user.
 */
@@ -285,7 +292,8 @@ module.exports = function (req,res,ok) {
 		return res.send("You are not permitted to perform this action.",403);
 	}
 };
-					</code></pre>
+</code></pre>
+</div>
 					</section>
 				</section>
 
