@@ -183,16 +183,45 @@ module.exports = {
 					<section>
 						<h2>Example: View</h2>
 						<p>layout.ejs</p>
-						<pre><code contenteditable>
+					
+```
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%- title %></title>
 
-					</code></pre>
+		<!-- Viewport mobile tag for sensible mobile support -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<!-- JavaScript and stylesheets from your public folder are included here -->
+		<%- assets.css %>
+		<%- assets.js %>
+	</head>
+
+	<body>
+		<%- body %>
+
+		<!-- Templates from your view path are included here -->
+		<%- assets.templateLibrary %>
+	</body>
+</html>
+```
 					</section>
 					<section>
 						<h2>Example: View</h2>
 						<p>index.ejs</p>
-						<pre><code contenteditable>
-
-					</code></pre>
+```
+<section id="about">
+	<span>
+		<%- partial('sections/about')%>
+	</span>
+</section>
+<section id="blog">
+	<span>
+		<%- partial('sections/blog')%>
+	</span>
+</section>
+```
 					</section>
 					<section>
 						<h2>Example: Controller</h2>
